@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: kaanagas-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    branch: main
+    envVars:
+      - key: DEBUG
+        value: 0
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
